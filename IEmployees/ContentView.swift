@@ -17,17 +17,19 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
+                VStack(alignment: .leading) {
+                    Title()
+                }
                 List {
                     ForEach(users) {
-                        user in NavigationLink(destination: AddUserView()) {
+                        user in NavigationLink(destination: EditUserView(user: user, name: user.name!, lastName: user.lastName!, email: user.email!, password: "", confirmPassword: "")) {
                             VStack {
-                                Text(user.name ?? "")
+                                Text("\(user.name ?? "") \(user.lastName ?? "")")
                             }
                         }
-                        
-                    }
+                    }.onDelete(perform: deleteUser)
                 }
-            }.navigationTitle("IEmployees")
+            }
              .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                             Button(action: {
@@ -39,12 +41,15 @@ struct ContentView: View {
                 }.sheet(isPresented: $isAddView) {
                     AddUserView()
                 }
-
             
         }
     }
+    func deleteUser(offSet: IndexSet) {
+        withAnimation {
+            offSet.map{ users[$0] }.forEach(managedObjectContext.delete)
+        }
+    }
 }
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

@@ -11,6 +11,8 @@
 		495630D728DA28400081B039 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495630D628DA28400081B039 /* ContentView.swift */; };
 		495630D928DA28410081B039 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 495630D828DA28410081B039 /* Assets.xcassets */; };
 		495630DC28DA28410081B039 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 495630DB28DA28410081B039 /* Preview Assets.xcassets */; };
+		4975116328DBBA44001A0040 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4975116228DBBA44001A0040 /* Components.swift */; };
+		4975116628DBBE95001A0040 /* EditUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4975116528DBBE95001A0040 /* EditUserView.swift */; };
 		49875FA228DA8D0100CE2B34 /* Employees.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49875FA028DA8D0100CE2B34 /* Employees.xcdatamodeld */; };
 		49875FA428DA8E0800CE2B34 /* DataControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49875FA328DA8E0800CE2B34 /* DataControl.swift */; };
 		49875FA628DA982B00CE2B34 /* AddUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49875FA528DA982B00CE2B34 /* AddUserView.swift */; };
@@ -22,6 +24,8 @@
 		495630D628DA28400081B039 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		495630D828DA28410081B039 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		495630DB28DA28410081B039 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4975116228DBBA44001A0040 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		4975116528DBBE95001A0040 /* EditUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserView.swift; sourceTree = "<group>"; };
 		49875FA128DA8D0100CE2B34 /* Employees.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Employees.xcdatamodel; sourceTree = "<group>"; };
 		49875FA328DA8E0800CE2B34 /* DataControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataControl.swift; sourceTree = "<group>"; };
 		49875FA528DA982B00CE2B34 /* AddUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserView.swift; sourceTree = "<group>"; };
@@ -57,10 +61,11 @@
 		495630D328DA28400081B039 /* IEmployees */ = {
 			isa = PBXGroup;
 			children = (
+				4975116428DBBE7C001A0040 /* Views */,
+				4975116128DBBA23001A0040 /* Compoents */,
 				49875F9F28DA8CCC00CE2B34 /* DataControl */,
 				495630D428DA28400081B039 /* IEmployeesApp.swift */,
 				495630D628DA28400081B039 /* ContentView.swift */,
-				49875FA528DA982B00CE2B34 /* AddUserView.swift */,
 				495630D828DA28410081B039 /* Assets.xcassets */,
 				495630DA28DA28410081B039 /* Preview Content */,
 			);
@@ -73,6 +78,23 @@
 				495630DB28DA28410081B039 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4975116128DBBA23001A0040 /* Compoents */ = {
+			isa = PBXGroup;
+			children = (
+				4975116228DBBA44001A0040 /* Components.swift */,
+			);
+			path = Compoents;
+			sourceTree = "<group>";
+		};
+		4975116428DBBE7C001A0040 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				49875FA528DA982B00CE2B34 /* AddUserView.swift */,
+				4975116528DBBE95001A0040 /* EditUserView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		49875F9F28DA8CCC00CE2B34 /* DataControl */ = {
@@ -155,9 +177,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				49875FA228DA8D0100CE2B34 /* Employees.xcdatamodeld in Sources */,
+				4975116328DBBA44001A0040 /* Components.swift in Sources */,
 				49875FA628DA982B00CE2B34 /* AddUserView.swift in Sources */,
 				495630D728DA28400081B039 /* ContentView.swift in Sources */,
 				495630D528DA28400081B039 /* IEmployeesApp.swift in Sources */,
+				4975116628DBBE95001A0040 /* EditUserView.swift in Sources */,
 				49875FA428DA8E0800CE2B34 /* DataControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
