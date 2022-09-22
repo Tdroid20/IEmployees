@@ -22,9 +22,24 @@ struct ContentView: View {
                 }
                 List {
                     ForEach(users) {
-                        user in NavigationLink(destination: EditUserView(user: user, name: user.name!, lastName: user.lastName!, email: user.email!, password: "", confirmPassword: "")) {
+                        user in NavigationLink(destination: EditUserView(user: user, name: user.name!, lastName: user.lastName!, email: user.email!, password: user.password!, confirmPassword: user.password!)) {
                             VStack {
-                                Text("\(user.name ?? "") \(user.lastName ?? "")")
+                                Text(user.name! + " " +  user.lastName! + "\n") +
+                                Text(user.email! + "\n")
+                                    .foregroundColor(.gray)
+                                    .font(.system(size: 14)) +
+                                Text("createdAt: ")
+                                    .foregroundColor(.black)
+                                    .font(.system(size: 14)) +
+                                Text("\(user.createdAt!.formatted()) \n")
+                                    .foregroundColor(.gray)
+                                    .font(.system(size: 14)) +
+                                Text("updatedAt: ")
+                                    .foregroundColor(.black)
+                                    .font(.system(size: 14)) +
+                                Text("\(user.updatedAt!.formatted())")
+                                    .foregroundColor(.gray)
+                                    .font(.system(size: 14))
                             }
                         }
                     }.onDelete(perform: deleteUser)
