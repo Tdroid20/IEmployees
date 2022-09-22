@@ -50,16 +50,19 @@ struct EditUserView: View {
                     
                     Text("\(Image(systemName: "key"))Password")
                         .bold()
-                    TextField("Your Password", text: $password)
+                    SecureField("Your Password", text: $password)
                         .textFieldStyle(.roundedBorder)
                         .foregroundColor(.black)
                         .padding(.bottom)
                         .textContentType(.password)
-                    TextField("Confirm Password", text: $confirmPassword)
+                    SecureField("Confirm Password", text: $confirmPassword)
                         .textFieldStyle(.roundedBorder)
                         .foregroundColor(.black)
                         .padding(.bottom)
                         .textContentType(.password)
+                        
+                    
+                    
 
                     
                     Button("Submit") {
